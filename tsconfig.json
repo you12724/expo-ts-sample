@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "outDir": "build",
-    "rootDir": ".",
+    "rootDir": "./src",
     "sourceMap": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
