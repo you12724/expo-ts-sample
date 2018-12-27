@@ -3,12 +3,12 @@ import { Icon } from "expo";
 
 import Colors from "../constants/Colors";
 
-interface TabBarIcon {
+interface TabBarIconProps {
   name: string;
   focused: boolean;
 }
 
-class TabBarIcon extends React.Component<TabBarIcon> {
+class TabBarIcon extends React.Component<TabBarIconProps> {
   render() {
     return (
       <Icon.Ionicons

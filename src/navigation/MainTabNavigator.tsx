@@ -10,13 +10,17 @@ import HomeScreen from "../screens/HomeScreen";
 import LinksScreen from "../screens/LinksScreen";
 import SettingsScreen from "../screens/SettingsScreen";
 
+interface MainTabNavigatorProps {
+  focused: boolean;
+}
+
 const HomeStack = createStackNavigator({
   Home: HomeScreen
 });
 
 HomeStack.navigationOptions = {
   tabBarLabel: "Home",
-  tabBarIcon: ({ focused }) => (
+  tabBarIcon: ({ focused }: MainTabNavigatorProps) => (
     <TabBarIcon
       focused={focused}
       name={
@@ -34,7 +38,7 @@ const LinksStack = createStackNavigator({
 
 LinksStack.navigationOptions = {
   tabBarLabel: "Links",
-  tabBarIcon: ({ focused }) => (
+  tabBarIcon: ({ focused }: MainTabNavigatorProps) => (
     <TabBarIcon
       focused={focused}
       name={Platform.OS === "ios" ? "ios-link" : "md-link"}
@@ -48,7 +52,7 @@ const SettingsStack = createStackNavigator({
 
 SettingsStack.navigationOptions = {
   tabBarLabel: "Settings",
-  tabBarIcon: ({ focused }) => (
+  tabBarIcon: ({ focused }: MainTabNavigatorProps) => (
     <TabBarIcon
       focused={focused}
       name={Platform.OS === "ios" ? "ios-options" : "md-options"}
