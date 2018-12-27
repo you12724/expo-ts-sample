@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "react-native";
 
 interface MonoTextProps {
-  style: Object;
+  style: any;
 }
 
 export class MonoText extends React.Component<MonoTextProps> {

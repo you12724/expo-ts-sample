@@ -12,6 +12,13 @@ import { WebBrowser } from "expo";
 
 import { MonoText } from "../components/StyledText";
 
+interface PlatformStyle {
+  shadowColor?: string;
+  shadowOffset?: any;
+  shadowOpacity?: number;
+  shadowRadius?: number;
+  elevation?: number;
+}
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
     header: null
@@ -171,7 +178,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    ...Platform.select({
+    ...Platform.select<PlatformStyle>({
       ios: {
         shadowColor: "black",
         shadowOffset: { height: -3 },
